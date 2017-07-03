@@ -1,6 +1,6 @@
 import React from 'react';
-import { 
-  BrowserRouter as Router, 
+import {
+  BrowserRouter as Router,
   Route
 } from 'react-router-dom';
 import NavBar from '../components/NavBar';
@@ -10,10 +10,16 @@ import Directors from '../components/Directors';
 import Movies from '../components/Movies';
 
 
-const App = (props) => {
+const App = () => {
   return (
     <Router>
-      {/*{code here}*/}
+      <div>
+        <NavBar />
+        <Route exact path='/' component={Home} />
+        <Route path='/actors' component={Actors} />
+        <Route path='/directors' component={Directors} />
+        <Route path='/movies' component={Movies} />
+      </div>
     </Router>
   );
 };
